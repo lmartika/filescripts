@@ -68,6 +68,11 @@ if (( hasf+hasd > 1 )); then
    exit 1
 fi
 
+if (( hasf+hasd < 1 )); then
+    usage
+   exit 1
+fi
+
 if (( hasd > 0 ))
     then
 	ls $indir > filenames.txt
